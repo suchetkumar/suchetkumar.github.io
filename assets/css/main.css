@@ -2890,7 +2890,7 @@
 			}
 
 		.wrapper.style2 {
-			background-color: rgb(0, 0, 0);
+			background-image: linear-gradient(to bottom right, rgb(3, 17, 46), rgb(46, 100, 63));
 			color: #a6a6a6;
 		}
 

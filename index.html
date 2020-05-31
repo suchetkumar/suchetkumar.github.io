@@ -31,13 +31,13 @@
 			<section class="banner full" style="height: 100%;">
 				<article>
 					<div class="inner">
-						<img src="images/slide01.jpg">
-						<header>
+						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg">
+						<header id="title" style="position: relative;">
 							<p class="description">Creativity with computer science: 
 							A digital portfolio</p>
 							<h2>Suchet Kumar</h2>
 						</header>
-						<div id="scrollDown" style="position:relative; top:270px">
+						<div>
 							<h1>Projects</h1>
 							<i class="fa fa-angle-double-down" style="font-size:36px"></i>
 						</div>
@@ -60,7 +60,8 @@
 										<p>Computer Vision and Augmented Reality</p>
 										<h2>Catch2.h</h2>
 									</header>
-									<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+									<p>Catch2.h is an augmented reality game, much like the snapchat arcade game filters that leverage some fascinating computer vision algorithms. 
+										However, </p>
 									<footer class="align-center">
 										<a href="#" class="button alt">Learn More</a>
 									</footer>
@@ -136,38 +137,6 @@
 				</div>
 			</section>
 
-		<!-- Three -->
-			<section id="three" class="wrapper style2">
-				<div class="inner">
-					<header class="align-center">
-						<p class="special">Nam vel ante sit amet libero scelerisque facilisis eleifend vitae urna</p>
-						<h2>Morbi maximus justo</h2>
-					</header>
-					<div class="gallery">
-						<div>
-							<div class="image fit">
-								<a href="#"><img src="images/pic01.jpg" alt="" /></a>
-							</div>
-						</div>
-						<div>
-							<div class="image fit">
-								<a href="#"><img src="images/pic02.jpg" alt="" /></a>
-							</div>
-						</div>
-						<div>
-							<div class="image fit">
-								<a href="#"><img src="images/pic03.jpg" alt="" /></a>
-							</div>
-						</div>
-						<div>
-							<div class="image fit">
-								<a href="#"><img src="images/pic04.jpg" alt="" /></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -191,9 +160,13 @@
 			<script src="assets/js/anime.min.js"></script>
 			<script src="myscripts.js"></script>
 			<script>
-				$(document).ready( function() {
-					$("#scrollDown").fadeIn(4000);
-				});
+				var height = $(window).height();
+				var width = $(window).width();
+				var title = document.querySelector("#title");
+				document.addEventListener("mousemove", (e)=>{
+					title.style.top = height/40-e.screenY/20 + "px";
+					title.style.left = width/40-e.screenX/20 + "px";
+				})
 			</script>
 	</body>
 </html>

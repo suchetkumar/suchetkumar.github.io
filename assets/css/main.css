@@ -4038,6 +4038,12 @@
 			padding: 0;
 			min-height: 100vh;
 			height: 100vh !important;
+			
+			background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
 		}
 
 		.banner.half {

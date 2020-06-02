@@ -9,6 +9,12 @@
 */
 
 /* Reset */
+	.colorchange {
+		transition: 0.5s;
+	}
+	.colorchange:hover {
+		color: rgb(7, 202, 228);
+	}
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
@@ -2890,7 +2896,7 @@
 			}
 
 		.wrapper.style2 {
-			background-image: linear-gradient(to bottom right, rgb(11, 18, 32), rgb(46, 100, 63));
+			background-image: linear-gradient(rgb(46, 98, 100), rgb(4, 77, 46));
 			color: #a6a6a6;
 		}
 
@@ -4038,8 +4044,8 @@
 			padding: 0;
 			min-height: 100vh;
 			height: 100vh !important;
-			
-			background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg) no-repeat center center fixed; 
+
+			background: url(../../images/bg.jpg) no-repeat center center fixed; 
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;

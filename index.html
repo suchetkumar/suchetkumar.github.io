@@ -33,16 +33,20 @@
 				<article>
 					
 
-					<div class="inner">
-						<header id="title" style="position: relative;">
-							<p class="description">Creativity with computer science: 
+					<div class="inner" id="title">
+						<img src="images/foreground.png">
+						<header  style="position: relative;">
+							<p class="description colorchange">Creativity with computer science: 
 							A digital portfolio</p>
-							<h2><a href="generic.html">Suchet Kumar</a></h2>
+							<h2><a class="colorchange" href="generic.html" id="myname">Suchet Kumar</a></h2>
+							<a id="aboutme" style="opacity: 0;" class="colorchange" href="generic.html">About Me</a> <br><br>
+							<a id="projects" style="opacity: 0;" class="colorchange" href="generic.html">Projects</a> <br><br>
+							<a id="contact" style="opacity: 0;" class="colorchange" href="generic.html">Contact</a>
 						</header>
-						<div>
+						<!--<div>
 							<h1>Projects</h1>
 							<i class="fa fa-angle-double-down" style="font-size:36px"></i>
-						</div>
+						</div>-->
 					</div>
 				</article>
 			</section>
@@ -88,7 +92,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div>
 							<div class="box">
 								<div class="image fit">
@@ -170,6 +174,18 @@
 					title.style.left = width/40-e.screenX/20 + "px";
 					examples.style.top = height/40-e.screenY/20 + "px";
 					examples.style.left = width/40-e.screenX/20 + "px";
+				})
+
+				$('#myname').hover(function() {
+					$('#aboutme').animate({
+						opacity: 1
+					}, 1000);
+					$('#projects').animate({
+						opacity: 1
+					}, 1500);
+					$('#contact').animate({
+						opacity: 1
+					}, 2000);
 				})
 			</script>
 			<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>

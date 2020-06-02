@@ -73,7 +73,7 @@ var settings = {
 
 						var pos = parseInt($window.scrollTop()) - parseInt($t.position().top);
 
-						$t.css('background-position', 'center ' + (pos * (-1 * intensity)) + 'px');
+						$t.css('background-position', 'center ');
 
 					});
 
@@ -200,8 +200,8 @@ var settings = {
 
 					// Slide.
 						$slide
-							.css('background-image', 'url("' + $img.attr('src') + '")')
-							.css('background-position', ($slide.data('position') ? $slide.data('position') : 'center'));
+							.css('background-image', 'url("' + $img.attr('src') + '")');
+							//.css('background-position', ($slide.data('position') ? $slide.data('position') : 'center'));
 
 					// Add to slides.
 						slides.push($slide);

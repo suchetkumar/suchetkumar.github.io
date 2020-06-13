@@ -3337,27 +3337,6 @@
 				z-index: 2;
 			}
 
-			.wrapper.style3 p {
-				text-transform: uppercase;
-				font-size: .75rem;
-				font-weight: 300;
-				margin: 0 0 .5rem 0;
-				padding: 0 0 1rem 0;
-				letter-spacing: .25rem;
-			}
-
-				.wrapper.style3 p:after {
-					content: '';
-					position: absolute;
-					margin: auto;
-					right: 0;
-					bottom: 0;
-					left: 0;
-					width: 50%;
-					height: 1px;
-					background-color: rgba(255, 255, 255, 0.5);
-				}
-
 			.wrapper.style3:before {
 				-moz-transition: opacity 3s ease;
 				-webkit-transition: opacity 3s ease;

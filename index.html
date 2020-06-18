@@ -40,9 +40,9 @@
 							<p class="description colorchange">Creativity with computer science: 
 							A digital portfolio</p>
 							<h2><a class="colorchange" href="generic.html" id="myname">Suchet Kumar</a></h2>
-							<a id="aboutme" style="opacity: 0;" class="colorchange" href="generic.html">About Me</a> <br><br>
-							<a id="projects" style="opacity: 0;" class="colorchange" href="generic.html">Projects</a> <br><br>
-							<a id="contact" style="opacity: 0;" class="colorchange" href="generic.html">Contact</a>
+							<a id="aboutme" style="opacity: 0;" class="colorchange" href="#one">About Me</a> <br><br>
+							<a id="projects" style="opacity: 0;" class="colorchange" href="#two">Projects</a> <br><br>
+							<a id="contact" style="opacity: 0;" class="colorchange" href="#footer">Contact</a>
 						</header>
 						<!--<div>
 							<h1>Projects</h1>
@@ -52,8 +52,8 @@
 				</article>
 			</section>
 
-			<section id="two" class="wrapper style3" style="display: flex">
-					<div class="row inner">
+			<section id="one" class="wrapper style3" style="display: flex">
+					<div class="row inner" id="about">
 						<div class="col-4">
 							<img src="./images/picture.png" class = "img-responsive" width = "100%">
 						</div>
@@ -72,9 +72,12 @@
 					</div>
 			</section>
 
-		<!-- One -->
-			<section id="one" class="wrapper style2">
+			<section id="two" class="wrapper style2">
 				<div class="inner">
+					<div style="position: relative;" id="projects">
+						<h2 style="text-align: center; color: #bfbfbf;">Projects</h2>
+					</div>
+					<br>
 					<div class="grid-style" style="position: relative;" id="examples">
 
 						<div>
@@ -139,8 +142,8 @@
 								</div>
 								<div class="content">
 									<header class="align-center">
-										<p>Applying Genetic Algorithms to Business</p>
-										<h2>TypeWheels: Optimized Learning</h2>
+										<p><s>Machine learning</s> Human Learning</p>
+										<h2>TypeWheels: Optimized Practice</h2>
 									</header>
 									<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum.</p>
 									<footer class="align-center">
@@ -169,6 +172,8 @@
 			<footer id="footer">
 				<div class="container">
 					<ul class="icons">
+						<li><a class="icon fa-github"></a></li>
+						<li><a class="icon fa-soundcloud"></a></li>
 						<li><a href="https://www.linkedin.com/in/suchet-kumar" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 					</ul>
@@ -190,11 +195,14 @@
 				var width = $(window).width();
 				var title = document.querySelector("#title");
 				var examples = document.querySelector("#examples");
+				var about = document.querySelector("#about");
 				document.addEventListener("mousemove", (e)=>{
 					title.style.top = height/40-e.screenY/20 + "px";
 					title.style.left = width/40-e.screenX/20 + "px";
 					examples.style.top = height/60-e.screenY/30 + "px";
 					examples.style.left = width/60-e.screenX/30 + "px";
+					about.style.top = height/100-e.screenY/50 + "px";
+					about.style.left = width/100-e.screenX/50 + "px";
 				})
 
 				$('#myname').hover(function() {
@@ -208,6 +216,20 @@
 						opacity: 1
 					}, 2000);
 				})
+
+				$(function() {
+						$('a[href*=\\#]:not([href=\\#])').on('click', function() {
+								var target = $(this.hash);
+								target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+								if (target.length) {
+									$('html,body').animate({
+											scrollTop: target.offset().top
+									}, 1000);
+									return false;
+								}
+						});
+				});
+
 			</script>
 			<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
 			<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
